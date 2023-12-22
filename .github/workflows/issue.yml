@@ -16,3 +16,4 @@ jobs:
              "body": "This issue automatically created by the Github Actions
                       Workflows **${{ github.workflow }}**. \n\n the commit has was:
                       _${{ github.sha }}_."
+          }'
