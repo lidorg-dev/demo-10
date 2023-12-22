@@ -7,9 +7,9 @@ jobs:
     steps:
     -  name: Create issue using REST API
        run: |
-         curl --request POST \
-         --url https://api.github.com/repos/${{ github.repository }}/issues \
-         --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+         curl -L -X POST \
+         --url https://api.github.com/repos/lidorg-dev/${{ github.repository }}/issues \
+         --header "authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
          --header "Accept: application/vnd.github+json" \
          --header "X-GitHub-Api-Version: 2022-11-28" \
          --data '{
